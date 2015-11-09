@@ -100,8 +100,8 @@ test() ->
     test("115.29.161.118").
 test(Ip) ->
     case find(Ip) of
-        {ok,_Bin} -> ok;
-            %%?PRINT("Ip:~s -> ~ts",[Ip,Bin]);
+        {ok,Bin} -> 
+            ?PRINT("Ip:~s -> ~ts",[Ip,Bin]);
         false ->
             ?PRINT("Ip:~w N/A", [Ip])
     end.
